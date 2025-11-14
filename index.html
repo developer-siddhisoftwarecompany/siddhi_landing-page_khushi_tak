@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -87,7 +87,7 @@
     </div>
 
 
-    
+
     <div class="main-wrap">
         <div class="heading">Watch, Stream &amp; Popup</div>
         <div class="section-row">
@@ -105,21 +105,21 @@
             </div>
             <!-- Center Mockup/Video -->
             <div class="mockup-area">
-                
+
                 <div class="phone-frame">
                     <img src="Images/Device.png" alt="device" class="image-device">
                     <img src="Images/Image-2.jpg" class="video-img" alt="video preview" />
-                   <div class="lens"><img src="Images/Lens.png"></div>
+                    <div class="lens"><img src="Images/Lens.png"></div>
                     <div class="play-btn">
                         <img src="Images/octicon_play-24.png">
                     </div>
-                    
+
                 </div>
-                
+
             </div>
             <!-- Right Buttons -->
             <div class="side-buttons">
-                <div class="icon-wrap" >
+                <div class="icon-wrap">
                     <img src="Images/Frame 8.png" alt="frame 8">
                 </div>
                 <button class="side-btn-2">WAV</button>
@@ -131,6 +131,103 @@
             <div class="badge-8k">8 K</div>
         </div>
     </div>
+
+
+    <!-- /*Testimonial part*/ -->
+    <div class="container">
+        <div class="gradient-title-2">Real Voices. Real Experience.</div>
+    </div>
+    <!-- Testimonial 1 -->
+    <div class="testimonial-container active">
+        <div class="photo-wrapper">
+            <div class="photo-card" style="background-image:url('Images/Person-1.png');"></div>
+        </div>
+        <div class="testimonial-content">
+            <p class="testimonial-text">
+                MX Player is one of the best and most reliable video players for Android. It supports almost every video
+                format, runs smoothly even with large HD or 4K files, and offers handy gesture controls for brightness,
+                volume, and playback. The subtitle support is excellent — you can add, sync, and even customize
+                subtitles easily. Playback speed control and resume options make it even more convenient.
+            </p>
+            <div class="End-content">
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="author">Neven Mazić</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-container">
+        <div class="photo-wrapper">
+            <div class="photo-card" style="background-image:url('Images/Person-2.png');"></div>
+        </div>
+        <div class="testimonial-content">
+            <p class="testimonial-text">
+                Amazing ! Best one available. It even finds and downloads subtitles !! Edit: way too many ads! Also, the
+                app freezes everytime i try to delete videos. Please fix the bug and lessen the amount of ads and change
+                them frequently. It's more irritating seeing the same ad over and over for weeks! Don't ruin such a
+                great app with these useless additions.
+            </p>
+            <div class="End-content">
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="author">Gideon Uche</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-container">
+        <div class="photo-wrapper">
+            <div class="photo-card" style="background-image:url('Images/Person-3.png');"></div>
+        </div>
+        <div class="testimonial-content">
+            <p class="testimonial-text">
+                This is actually the best app I've come across for motion pictures; especially the privacy file that
+                allows you keep censored videos in a safe space away from unwanted access without reflecting on your
+                file app by Google... I'm generally impressed about the app.
+            </p>
+            <div class="End-content">
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="author">Eira</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let index = 0;
+        const testimonials = document.querySelectorAll(".testimonial-container");
+
+        function showNextTestimonial() {
+            // remove active from current
+            testimonials[index].classList.remove("active");
+
+            // move to next
+            index = (index + 1) % testimonials.length;
+
+            // add active to next
+            testimonials[index].classList.add("active");
+        }
+
+        setInterval(showNextTestimonial, 3000); // change every 5 seconds
+    </script>
+
+
 </body>
 
 </html>
